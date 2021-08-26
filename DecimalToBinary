@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+   
+    int decimal, pwr=-1, convert;
+    double digit, binary=0;
+    
+    cout << "Decimal : ";
+    cin >> decimal;
+    
+    while (decimal >= 1)
+    {
+        digit = decimal % 2;
+        binary = digit + (binary/10);
+        decimal = decimal / 2;
+        pwr++;
+    
+    }
+    
+    convert = binary * pow(10,pwr);
+    cout << "Binary : " << convert << endl;
+    
+    
+    return 0;
+}
